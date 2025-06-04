@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.vcxproj.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+bin/
+bin-int/
+[Oo]bj/
