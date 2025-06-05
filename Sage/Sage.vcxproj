@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Sage\Log.h" />
     <ClInclude Include="src\Sage\EntryPoint.h" />
     <ClInclude Include="src\Sage.h" />
     <ClInclude Include="src\Sage\Application.h" />
     <ClInclude Include="src\Sage\Core.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Sage\Log.cpp" />
     <ClCompile Include="src\Sage\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -60,7 +62,8 @@
     <ClCompile>
       <PreprocessorDefinitions>SAGE_PLATFORM_WINDOWS;SAGE_BUILD_DLL;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Sage\vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -71,7 +74,8 @@
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Sage\vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
