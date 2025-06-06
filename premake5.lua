@@ -49,7 +49,7 @@ project "Sage"
 
         postbuildcommands
         {
-          ("{COPYDIR} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir ..  "/SandBox/\"" )
+          ("{COPYDIR} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir ..  "/Sandbox/\"" )
         }
     
     filter "configurations:Debug"
